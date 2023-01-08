@@ -1,0 +1,24 @@
+import gamescript
+import nodesystem {extension}
+import drawing {extension}
+import engine
+
+new funct "randommaterial"
+new var "nodecount"
+
+on "var.nodecount%value\="100"" do
+set var.nodecount "<math.add "<var.nodecount>" "1">"
+nodepoint new "<math.random "0" "100">" "<math.random "0" "100">" "<math.random "0" "100">"
+end
+
+on "var.nodecount%value="100"" do
+drawing line "node<math.random "0" "100">" "node<math.random "0" "100">"
+<function "randommaterial">
+end
+
+funct "randommaterial" do
+terrain new fill "line<math.random "0" "200">" "line<math.random "0" "200">" "dist="10", material="sand", size=15"
+terrain new fill "line<math.random "0" "200">" "line<math.random "0" "200">" "dist="10", material="dirt", size=15"
+terrain new fill "line<math.random "0" "200">" "line<math.random "0" "200">" "dist="10", material="grass", size=15"
+terrain new fill "line<math.random "0" "200">" "line<math.random "0" "200">" "dist="10", material="stone", size=15"
+terrain new fill "line<math.random "0" "200">" "line<math.random "0" "200">" "dist="10", material="water", size=15"

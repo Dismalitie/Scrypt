@@ -1,0 +1,80 @@
+import gamescript
+import webnet
+
+new table "table" <1>
+// put your script through obfuscatorEncode.gamescript and paste the console output under "<1> is"
+<1> is 
+c8 59 9b 26 21 12 c8 c6 71 25 88 ab 02 0a ef 4e 
+b5 b4 ae 0d 2f be 5a 55 f6 35 37 02 bc 0a 03 85 
+07 71 a9 86 38 15 d9 de 97 df 8d 2d 7e 2d 1d af 
+d7 c7 ff 0c 17 da 0a 98 80 e3 46 e6 54 e5 6e e8 
+8e ef 58 18 26 e9 0b 20 96 20 bf b7 8b 9b 88 28 
+85 3d 86 45 bc 88 b4 f4 40 d3 3f b0 cf e6 3e c4 
+ae c9 c0 06 0e 7e ce ea a2 9c 5c 35 f7 a0 11 65 
+69 c0 8e 9f 73 83 b2 8f d0 53 ef 39 d0 74 5b 75 
+28 f0 cc d8 b6 83 02 5a f0 2b 0e ad 67 39 3f 24 
+a1 23 0b 8b 7e 78 2f 39 9d 89 1f 97 41 aa cb da 
+5d f2 6f 08 a3 92 58 79 ac 7c 67 a1 12 cb c8 9f 
+15 55 7f 5e 9c 4b de 5b 7d e3 ab 01 44 1c b1 81 
+ed ce 8b e1 0e f1 ed b2 e9 6f 85 bf 04 17 68 48 
+51 a8 44 ee c7 ae 25 88 a2 f1 72 56 89 f2 8f 2c 
+2f 5c 7b 47 ee 4e 42 6f 41 c4 a1 e5 a5 f7 0e 0e 
+45 89 58 71 10 10 97 e0 2f 1d 87 62 6e 3e a0 8f 
+56 c6 9a 14 96 4e 92 4f 9e 05 2a d1 9d a3 73 a6 
+7f 49 b2 6c 99 22 f0 75 ef 4e 88 bc 11 51 01 8e 
+e9 59 10 0e db ee 12 c5 d0 bc 10 18 38 fb f0 c1 
+8e dd 63 c2 2a e0 a8 59 be 0b 4e d6 4f b1 00 f1 
+c8 a9 8a 1d 9d ae 55 d5 98 1d 3b f1 ea ac 76 df 
+8a 26 2d 03 6c 5b ad 1f 24 58 c9 e6 9a 1f 49 4b 
+fb 27 53 9c 71 f9 28 fb 25 7e e3 cc ce 4d 52 9c 
+b8 a6 ba f0 7b 4a 53 bb 32 80 67 35 c3 8e 89 73 
+90 55 35 c1 9a e4 30 6c 39 4a 4c f1 cf f2 c7 7d 
+05 cf ee cc 7c 1e 4e c8 af 66 ea 1d df f5 3d 01 
+25 43 b9 0e 1c fb 11 62 62 2c 7e 0e 13 d5 f9 99 
+7b 2b be 82 b9 7a c2 51 23 b1 05 75 44 6c 6d be 
+4e 7f ab 39 e6 d8 80 65 9d 6c 37 a3 ac b3 63 63 
+23 c3 c9 b1 59 65 35 bf 21 09 fc b8 f9 ad ae 83 
+81 c6 42 3a 3e 5b cf a4 d5 a0 41 4a 2a 15 b3 d4 
+d4 cc 67 26 4a d3 c3 dd 6d 99 0a 71 10 b8 b7 52 
+47 5f a4 ba 00 bd 96 1d 16 1e 0a a3 3c 41 0e 43 
+63 ab c4 0c 4e b9 1c 13 e5 fc 24 70 31 73 89 69 
+af 80 07 88 3c d5 4d e6 1d e1 ab b9 d5 b3 eb 42 
+e1 de 81 bc 5f 87 f5 4f 7b 10 4d 34 29 91 32 c0 
+3c 72 80 ce f1 db 83 6d 47 3f 8e 5f 5e fd dc 5c 
+53 31 6f fa f2 ab e5 24 ab f5 1a 85 d1 55 69 52 
+44 50 87 a8 b1 01 11 4e ba 39 73 28 25 d3 81 4c 
+5a 07 f8 1d 47 21 94 d1 c0 c7 dd 21 12 95 97 99 
+60 ab 63 7a 70 98 ae 3a 55 a0 46 ec d5 90 31 e7 
+ab 03 7b a6 48 7a 7b 03 ec e8 86 23 61 76 48 d7 
+d8 4f 0e 3d 06 22 02 f6 1e c9 79 57 11 e7 0c 66 
+e0 a1 f0 e4 7e 5e e3 35 0a 59 cf ba f5 fd 0c f7 
+c5 38 68 f9 70 13 6b 1e 57 92 63 46 0a c4 04 84 
+26 97 b4 7e 1a 0c de bb c2 1a 60 5a 61 82 7a 7e 
+31 d7 65 3a 4c e3 0b d4 22 5d 70 7e 46 5e 22 d0 
+c7 66 2e 44 b0 12 0b 03 ba 5f 72 d6 4a d8 59 cc 
+d7 56 04 c7 77 ae e8 dc 88 58 a2 f7 86 61 01 6b 
+94 d8 44 98 6a 70 3a 90 84 ea d9 11 ea b3 b4 08 
+73 47 d2 30 d0 a6 8b c2 84 b2 c8 d0 60 04 e1 63 
+9d ea 15 cf 23 0a a5 d3 9e 87 5a 4e 5a 36 0a 8b 
+09 d8 2b 2d d0 c1 73 04 f9 94 ab ff 0e f3 f4 eb 
+09 bf fe 9e 6f 76 fd 64 72 61 87 fd d9 f9 10 56 
+18 ed 32 ec db 3a 50 5d d2 6c 97 06 0e fe ba 49 
+53 97 a7 74 b0 c6 6a 9c 6e 5c 13 e9 76 97 a9 3f 
+e3 d1 04 3f 07 78 cb 64 14 18 f8 0a 21 0b 64 3f 
+fd d7 63 c6 c8 51 58 94 8a 01 18 27 44 9d 45 2a 
+4a 8e 91 76 93 e6 39 f7 4b 1d 23 a3 10 4d ed ef 
+33 8c 4d 77 44 2c 71 ec 69 25 e2 e4 de 35 8e 5b 
+43 22 43 3b d4 09 69 44 79 df ef 4d ad fb 15 74 
+a4 d1 59 97 8c a0 e2 42 31 00 d2 e0 a1 d1 c3 8a 
+ab fb 6c 84 a2 16 02 a0 
+end
+for "1" in <1> do
+webnet new <2>
+webnet edit <2> do math.random() %randbyte?nbytes=1000&format=h %hexadecimal %randkey key key random new <3>
+end
+on file.start
+loop
+print "GAMESCRIPT OBFUSCATOR BRUH!"
+end
+end
+webnet new connection "%addresInput?c8599b262112c8c6712588ab020aef4e%token%" "%addresInput?b5b4ae0d2fbe5a55f6353702bc0a0385%token%"

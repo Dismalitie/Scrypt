@@ -1,0 +1,114 @@
+import gamescript
+import nodesystem {extension}
+import drawing {extension}
+import engine
+import cameratools {extension}
+import placeholder.png
+import transparent.png
+import grass.geo.json
+import dirt.geo.json
+import stone.geo.json
+
+
+cameratools camera.preset "2d"
+new var "nodecount"
+
+on "var.nodecount%value\="100"" do
+set var.nodecount "<math.add "<var.nodecount>" "1">"
+nodepoint new "<math.random "0" "100">" "<math.random "0" "100">" "<math.random "0" "0">"
+end
+
+on "var.nodecount%value="100"" do
+drawing line "node<math.random "0" "100">" "node<math.random "0" "100">"
+new obj "block" duplicate fill "line<math.random "0" "200"> "line<math.random "0" "200">
+properties "block" model "dirt.geo.json"
+end
+
+on "block".position%y=<math.less "32" "true"> "individual" do
+properties "block" model "stone.geo.json"
+end
+
+on "instance.area%empty=true" do
+new obj "air" duplicate fill
+properties "air" texture "transparent.png"
+end
+
+on "block" collide "air" do
+properties model "grass.geo.json"
+end
+
+new obj "playercube" 
+constant
+properties "playercube" angle "0" 
+end
+properties "playercube" texture "placeholder.png"
+
+new obj "tree"
+set "tree".position.x <math.random "0" "100">
+set "tree".position.y <math.random "0" "100">
+on "tree".face.bottom collide "air" do
+set "tree".position.y <math.subtract "<"tree".position.y>" "1">
+end
+
+new obj "crosshair"
+set "crosshair".position.x" "<player.mouse.x>" 
+set "crosshair".position.y" "<player.mouse.y>" 
+set "crosshair".position.z" "<player.mouse.z>" 
+on "crosshair" collide "block" + <player.input.click1> do
+destroy instigator "block"
+end
+
+new obj "inventory"
+constant
+properties "inventory" position align "bottom-center"
+end
+
+properties "inventory" texture "placeholder.png"
+new obj "grassicon"
+parent "grassicon" "inventory"
+new obj "stoneicon"
+parent "stoneicon" "inventory"
+new obj "dirticon"
+parent "dirticon" "inventory"
+
+properties "grassicon" texture "placeholder"
+properties "stoneicon" texture "placeholder"
+properties "dirticon" texture "placeholder"
+
+new obj "inventoryselector"
+
+set "inventoryselector".position.x "player.input.scroll%value"
+
+on "crosshair" collide "air" + <player.input.click2> do
+on "inventoryselector" collide "grassicon" do
+properties instigator "air" model "grass.geo.json"
+end
+on "inventoryselector" collide "stoneicon" do
+properties instigator "air" model "stone.geo.json"
+end
+on "inventoryselector" collide "dirticon" do
+properties instigator "air" model "dirt.geo.json"
+end
+end
+
+on player.input.w do
+set "playercube".position.y "<math.add ""playercube".position.y" "1"
+end
+on player.input.a do
+set "playercube".position.x "<math.subtract ""playercube".position.x" "1"
+end 
+on player.input.d do
+set "playercube".position.x "<math.add ""playercube".position.x" "1"
+end 
+
+on "playercube".face.bottom collide "air" do
+properties "playercube" gravity "1"
+end
+on "playercube".face.bottom collide "block" do
+properties "playercube" gravity "0"
+end
+
+
+
+
+

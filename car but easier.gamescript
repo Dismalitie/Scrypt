@@ -1,0 +1,4 @@
+import carModel.geo.json
+import vehicle {extension}
+vehicle new car "car"
+vehicle edit "car" model <carModel.geo.json>

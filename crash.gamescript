@@ -1,0 +1,15 @@
+import gamescript
+import crashtxt.txt {scriptReference}
+import reinstance {extension} {neededFunction="save, launch"}
+
+new var "crash"
+
+on instance.content.button1%state="true" do
+reinstance save
+set var.crash <&math.reference.pi%value="-1">
+end
+
+on instance.detect.hang%time="2" do
+set var.crash "<script.reference.crashtxt>Custom error message"
+reinstance launch
+end

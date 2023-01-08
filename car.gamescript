@@ -1,0 +1,53 @@
+import gamescript
+
+new funct "entered"
+new obj "car"
+new var "fuel"
+new obj "carEntrance"
+new obj "carExit"
+
+set var.fuel "<math.random"1" "100">"
+
+parent "fuel" "car"
+parent "carEntrance" "car"
+
+properties edit "carEntrance" "interaction="true", interactionText="Enter", interactionBind="default", interactionTime="0", callback="<function entered%toggle>"
+properties edit "carExit" "interaction="true", interactionText="Enter", interactionBind="default", interactionTime="0", callback="<function entered%toggle>, hidden="true""
+
+
+on "entered"%value="true" do
+constant
+set player.position%x=<get "car".position%x>
+set player.position%y=<get "car".position%y>
+set player.position%z=<get "car".position%z>
+end
+properties edit "carExit" "hidden="false""
+on player.button.w%value=true do
+move "car" <forward>
+end
+on player.input.a%value=true do
+move "car" <left>
+end
+on player.input.s%value=true do
+move "car" <backwards>
+end
+on player.input.d%value=true do
+move "car" <right>
+end
+every "1" do
+set var.fuel "<math.subtract"<fuel>" "1">
+end
+end
+
+new funct "forward" do
+move "car" "1" "<player.camera.x>"
+new funct "backwards" do
+move "car" "-1" "<player.camera.x>"
+new funct "left" do
+move "car" "1" "<math.subtract"<player.camera.x>" "-90">"
+new funct "right" do
+move "car" "1" "<math.add"<player.camera.x>" "90">"
+
+on var.fuel="0" do
+player.input.<all>%ignore, exception="e"
+end
