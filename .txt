@@ -1,0 +1,14 @@
+import advanced
+
+append line:(3-*) local identifier:"advanced"
+
+--pull--
+pull:none("none") parameters:"parameters"
+pull:request("from") parameters:"parameters"
+pull:get("from") parameters:"parameters"
+pull:local("var") parameters:"parameters"
+pull:@all(none) parameters:"parameters"
+
+--function
+function:new("name") parameters:"parameters"
+function:edit("name") ("to edit") parameters:"parameters"
